@@ -1,0 +1,22 @@
+.uploadLabelImage {
+  min-height: 20rem;
+  background-color: $muted;
+}
+
+.uploadLabelBtn {
+  min-height: 20rem;
+  background: $gray-100;
+}
+
+.previewImage {
+  min-height: 20rem;
+  background-color: $muted;
+}
+
+.previewResetBtn {
+  background-color: rgba($dark, 0.5);
+  border-radius: 0 0.5rem 0 0.5rem;
+  &:hover {
+    background-color: $secondary;
+  }
+}

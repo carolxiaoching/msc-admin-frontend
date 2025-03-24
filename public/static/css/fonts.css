@@ -1,0 +1,93 @@
+/* GenSenRounded */
+
+@font-face {
+  font-family: GenSenRounded;
+  src: url('fonts/GenSenRounded/GenSenRounded-L.ttc') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: GenSenRounded;
+  src: url('fonts/GenSenRounded/GenSenRounded-EL.ttc') format('truetype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: GenSenRounded;
+  src: url('fonts/GenSenRounded/GenSenRounded-L.ttc') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: GenSenRounded;
+  src: url('fonts/GenSenRounded/GenSenRounded-M.ttc') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: GenSenRounded;
+  src: url('fonts/GenSenRounded/GenSenRounded-B.ttc') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: GenSenRounded;
+  src: url('fonts/GenSenRounded/GenSenRounded-H.ttc') format('truetype');
+  font-weight: 900;
+}
+
+/* NotoSansTC */
+
+@font-face {
+  font-family: NotoSansTC;
+  src: url('fonts/NotoSansTC/NotoSansTC-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: NotoSansTC;
+  src: url('fonts/NotoSansTC/NotoSansTC-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: NotoSansTC;
+  src: url('fonts/NotoSansTC/NotoSansTC-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: NotoSansTC;
+  src: url('fonts/NotoSansTC/NotoSansTC-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: NotoSansTC;
+  src: url('fonts/NotoSansTC/NotoSansTC-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: NotoSansTC;
+  src: url('fonts/NotoSansTC/NotoSansTC-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: NotoSansTC;
+  src: url('fonts/NotoSansTC/NotoSansTC-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: NotoSansTC;
+  src: url('fonts/NotoSansTC/NotoSansTC-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: NotoSansTC;
+  src: url('fonts/NotoSansTC/NotoSansTC-Black.ttf') format('truetype');
+  font-weight: 900;
+}
