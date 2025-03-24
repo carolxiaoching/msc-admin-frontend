@@ -18,6 +18,10 @@ export default defineConfig({
   },
   base: process.env.NODE_ENV === 'production' ? '/msc-admin-frontend/' : '',
   build: {
+    // 設定 1000 KB 避免 npm run build 超過 500 KB 的警告
+    chunkSizeWarningLimit: 1000,
+    // 解決部屬後找不到 _plugin-vue_export-helper 問題
+    // 來源： https://israynotarray.com/other/20220928/1377668819/
     rollupOptions: {
       output: {
         // https://github.com/rollup/rollup/blob/master/src/utils/sanitizeFileName.ts
