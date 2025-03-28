@@ -62,7 +62,7 @@
                   <td class="text-center text-xxl-start">
                     <div class="d-flex align-items-center">
                       <img
-                        :src="item.avatarImgUrl"
+                        v-lazy="item.avatarImgUrl"
                         class="thumbnail me-8 rounded-circle"
                         v-if="item.avatarImgUrl"
                       />
@@ -115,7 +115,11 @@
                   </td>
                   <td class="text-center text-xxl-start">
                     <div class="d-flex align-items-center">
-                      <img :src="item.coverImgUrl" class="thumbnail me-8" v-if="item.coverImgUrl" />
+                      <img
+                        v-lazy="item.coverImgUrl"
+                        class="thumbnail me-8"
+                        v-if="item.coverImgUrl"
+                      />
                       <div class="thumbnail me-8" v-else>
                         <i class="bi bi-person-fill"></i>
                       </div>

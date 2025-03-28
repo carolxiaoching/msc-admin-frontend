@@ -14,6 +14,9 @@ import { all } from '@vee-validate/rules';
 import { localize, setLocale } from '@vee-validate/i18n';
 import zhTw from '@vee-validate/i18n/dist/locale/zh_TW.json';
 
+// vue-lazyLoad
+import VueLazyLoad from 'vue-lazyload';
+
 import { getTime } from '@/scripts/methods';
 
 import App from './App.vue';
@@ -57,6 +60,7 @@ setLocale('zh_TW');
 const app = createApp(App);
 
 // 引入套件
+app.use(VueLazyLoad);
 app.use(VueAxios, axios);
 app.use(createPinia());
 app.use(router);

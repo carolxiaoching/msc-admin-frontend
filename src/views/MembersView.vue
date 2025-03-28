@@ -20,7 +20,7 @@
           <td class="text-center">
             <div class="d-flex justify-content-center align-items-center">
               <img
-                :src="item.avatarImgUrl"
+                v-lazy="item.avatarImgUrl"
                 class="thumbnail me-4 rounded-circle"
                 v-if="item.avatarImgUrl"
               />
@@ -67,11 +67,10 @@
       </p>
       <div class="d-flex align-items-center">
         <img
-          :src="delData.avatarImgUrl"
+          v-lazy="delData.avatarImgUrl"
           class="thumbnail me-4 rounded-circle"
           v-if="delData.avatarImgUrl"
         />
-        <img src="" class="thumbnail me-4 rounded-circle" v-else />
         <strong>
           {{ delData.nickName }}
         </strong>

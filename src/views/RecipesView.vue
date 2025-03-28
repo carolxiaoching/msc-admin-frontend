@@ -27,7 +27,7 @@
           <td class="d-none d-md-table-cell text-center">#{{ item._id.slice(-5) }}</td>
           <td class="text-center">
             <div class="d-flex align-items-center">
-              <img :src="item.coverImgUrl" class="thumbnail me-4" v-if="item.coverImgUrl" />
+              <img v-lazy="item.coverImgUrl" class="thumbnail me-4" v-if="item.coverImgUrl" />
               <div class="thumbnail me-4" v-else>
                 <i class="bi bi-person-fill"></i>
               </div>
@@ -50,7 +50,7 @@
           <td class="d-none d-lg-table-cell text-center">
             <div class="d-flex align-items-center">
               <img
-                :src="item.user?.avatarImgUrl"
+                v-lazy="item.user?.avatarImgUrl"
                 class="thumbnail me-4 rounded-circle"
                 v-if="item.user?.avatarImgUrl"
               />

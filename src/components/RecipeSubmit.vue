@@ -8,7 +8,7 @@
             <th scope="row" width="150" class="d-none d-sm-table-cell text-nowrap">食譜封面</th>
             <td class="text-center">
               <img
-                :src="tempRecipe.coverImgUrl"
+                v-lazy="tempRecipe.coverImgUrl"
                 alt=""
                 class="img-thumbnail"
                 style="max-width: 160px"

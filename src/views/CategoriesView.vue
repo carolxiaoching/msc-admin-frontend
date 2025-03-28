@@ -21,7 +21,7 @@
         <tr v-for="item in categories" :key="item._id">
           <td class="d-none d-sm-table-cell text-center">#{{ item._id.slice(-5) }}</td>
           <td class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-            <img :src="item.categoryImgUrl" class="thumbnail me-4" />
+            <img v-lazy="item.categoryImgUrl" class="thumbnail me-4" />
             {{ item.title }}
           </td>
           <td class="d-none d-xxl-table-cell text-center">{{ $getTime(item.createdAt) }}</td>

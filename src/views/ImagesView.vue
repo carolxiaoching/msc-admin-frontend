@@ -19,7 +19,7 @@
           <td class="d-none d-sm-table-cell text-center">{{ item.type }}</td>
           <td class="text-center">
             <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-              <img :src="item.imageUrl" alt="" class="thumbnail me-md-4" />
+              <img v-lazy="item.imageUrl" alt="" class="thumbnail me-md-4" />
               <a :href="item.imageUrl" target="_blank" class="text-decoration-underline">
                 開啟圖片
               </a>
@@ -51,13 +51,13 @@
       <p class="mb-8">
         確定要刪除 <strong> 圖片：#{{ delData.id.slice(-5) }} </strong>
       </p>
-      <img :src="delData.imageUrl" class="img-thumbnail" style="max-height: 12rem" />
+      <img v-lazy="delData.imageUrl" class="img-thumbnail" style="max-height: 12rem" />
     </template>
   </DelModal>
   <ImageModal ref="imageModalRef">
     <template #modal-header> 圖片 #{{ tempImage.id.slice(-5) }} </template>
     <template #modal-image>
-      <img :src="tempImage.imageUrl" class="img-thumbnail" style="max-height: 20rem" />
+      <img v-lazy="tempImage.imageUrl" class="img-thumbnail" style="max-height: 20rem" />
     </template>
     <template #modal-content>
       <label for="imageUrl" class="form-label">網址連結：</label>
