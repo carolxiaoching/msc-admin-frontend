@@ -244,14 +244,14 @@ const props = defineProps({
 
 // 動態監聽 props
 watch(
-  props,
+  () => props.tempRecipe,
   (newProps) => {
     tempRecipeData.value = {
-      nutritionFacts: newProps.tempRecipe.nutritionFacts,
-      ingredients: newProps.tempRecipe.ingredients,
+      nutritionFacts: newProps.nutritionFacts,
+      ingredients: newProps.ingredients,
     };
   },
-  { immediate: true, deep: true }
+  { immediate: true }
 );
 
 // 移除食材
