@@ -89,7 +89,7 @@
             <td>
               <ul class="list-unstyled mb-0">
                 <li v-for="(item, index) in tempRecipe.steps" :key="`ingredients${index}`">
-                  STEP {{ item.stepOrder || index }}： {{ item.stepContent }}
+                  STEP {{ index + 1 }}： {{ item.stepContent }}
                 </li>
               </ul>
             </td>
