@@ -14,12 +14,13 @@
           <th class="text-center">食譜名稱</th>
           <th class="d-none d-md-table-cell text-center" width="120">分類</th>
           <th class="d-none d-xxl-table-cell text-center" width="160">標籤</th>
-          <th class="d-none d-xxl-table-cell text-center" width="80">收藏人數</th>
+          <th class="d-none d-xxxl-table-cell text-center" width="80">收藏人數</th>
           <th class="d-none d-lg-table-cell text-center" width="120">發布者</th>
-          <th class="d-none d-xxl-table-cell text-center" width="120">公開狀態</th>
-          <th class="d-none d-xxl-table-cell text-center" width="120">建立時間</th>
-          <th class="d-none d-xxl-table-cell text-center" width="120">更新時間</th>
-          <th class="text-center" width="200">編輯</th>
+          <th class="d-none d-xxl-table-cell text-center" width="80">公開狀態</th>
+          <th class="d-none d-xxl-table-cell text-center" width="80">編輯推薦</th>
+          <th class="d-none d-xxxl-table-cell text-center" width="120">建立時間</th>
+          <th class="d-none d-xxxl-table-cell text-center" width="120">更新時間</th>
+          <th class="text-center" width="160">編輯</th>
         </tr>
       </thead>
       <tbody>
@@ -46,9 +47,9 @@
               </li>
             </ul>
           </td>
-          <td class="d-none d-xxl-table-cell text-center">{{ item.collectsCount }}</td>
+          <td class="d-none d-xxxl-table-cell text-center">{{ item.collectsCount }}</td>
           <td class="d-none d-lg-table-cell text-center">
-            <div class="d-flex align-items-center">
+            <div class="d-flex flex-column align-items-center">
               <img
                 v-lazy="item.user?.avatarImgUrl"
                 class="thumbnail me-4 rounded-circle"
@@ -71,9 +72,20 @@
               {{ item.isPublic ? '公開' : '私人' }}
             </span>
           </td>
+          <td class="d-none d-xxl-table-cell text-center">
+            <span
+              class="badge"
+              :class="{
+                'text-bg-primary': item.isRecommended,
+                'text-bg-light': !item.isRecommended,
+              }"
+            >
+              {{ item.isRecommended ? '是' : '否' }}
+            </span>
+          </td>
 
-          <td class="d-none d-xxl-table-cell text-center">{{ $getTime(item.createdAt) }}</td>
-          <td class="d-none d-xxl-table-cell text-center">{{ $getTime(item.updatedAt) }}</td>
+          <td class="d-none d-xxxl-table-cell text-center">{{ $getTime(item.createdAt) }}</td>
+          <td class="d-none d-xxxl-table-cell text-center">{{ $getTime(item.updatedAt) }}</td>
 
           <td class="text-center">
             <div class="btn-group btn-group-sm" role="group">

@@ -52,9 +52,14 @@
             <td>{{ tempRecipe.description }}</td>
           </tr>
           <tr>
-            <th scope="row" width="150" class="d-none d-sm-table-cell text-nowrap">是否開啟</th>
-            <td class="text-success" v-if="tempRecipe.isPublic">開啟</td>
-            <td class="text-danger" v-else>不開啟</td>
+            <th scope="row" width="150" class="d-none d-sm-table-cell text-nowrap">是否公開食譜</th>
+            <td class="text-success" v-if="tempRecipe.isPublic">公開食譜</td>
+            <td class="text-danger" v-else>私人食譜</td>
+          </tr>
+          <tr>
+            <th scope="row" width="150" class="d-none d-sm-table-cell text-nowrap">編輯推薦</th>
+            <td class="text-success" v-if="tempRecipe.isRecommended">推薦</td>
+            <td class="text-danger" v-else>不推薦</td>
           </tr>
           <tr>
             <th scope="row" width="150" class="d-none d-sm-table-cell text-nowrap">營養成分</th>

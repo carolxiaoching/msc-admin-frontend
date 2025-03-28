@@ -89,6 +89,7 @@ const tempRecipe = ref({
   title: '',
   coverImgUrl: '',
   isPublic: false,
+  isRecommended: false,
   category: '',
   cookingTime: '',
   description: '',

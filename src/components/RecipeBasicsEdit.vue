@@ -37,6 +37,62 @@
         />
       </div>
     </div>
+
+    <div class="p-14 p-md-16 bg-white rounded shadow-sm mb-16">
+      <h2 class="title mb-11">
+        <span class="titleIcon bg-secondary-subtle">
+          <i class="bi bi-file-earmark-text"></i>
+        </span>
+        <span> 基本設定 </span>
+        <span class="text-danger fs-6">(必填) </span>
+      </h2>
+
+      <div class="">
+        <div class="d-flex align-items-center mb-8">
+          <label for="title" class="form-label mb-0 me-16" style="min-width: 200px">
+            是否公開食譜：
+          </label>
+          <div class="form-group form-check ps-0">
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="isPublic"
+                v-model="tempRecipeData.isPublic"
+                :true-value="true"
+                :false-value="false"
+              />
+              <label class="form-check-label align-middle" for="isPublic">
+                {{ tempRecipeData.isPublic ? '目前為公開食譜' : '目前為私人食譜' }}
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center">
+          <label for="title" class="form-label mb-0 me-16" style="min-width: 200px">
+            編輯推薦：
+          </label>
+          <div class="form-group form-check ps-0">
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="isRecommended"
+                v-model="tempRecipeData.isRecommended"
+                :true-value="true"
+                :false-value="false"
+              />
+              <label class="form-check-label align-middle" for="isRecommended">
+                {{ tempRecipeData.isRecommended ? '推薦' : '不推薦' }}
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="p-14 p-md-16 bg-white rounded shadow-sm mb-16">
       <h2 class="title mb-11">
         <span class="titleIcon bg-secondary-subtle">
@@ -154,24 +210,6 @@
           />
           <ErrorMessage name="食譜簡介" class="invalid-feedback" />
         </div>
-        <div class="col-12">
-          <div class="form-group form-check ps-0">
-            <div class="form-check form-switch">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="isPublic"
-                v-model="tempRecipeData.isPublic"
-                :true-value="true"
-                :false-value="false"
-              />
-              <label class="form-check-label align-middle" for="isPublic">
-                {{ tempRecipeData.isPublic ? '公開食譜' : '不公開食譜' }}
-              </label>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -228,6 +266,7 @@ const tempRecipeData = ref({
   title: '',
   coverImgUrl: '',
   isPublic: false,
+  isRecommended: false,
   category: '',
   cookingTime: '',
   description: '',
@@ -270,6 +309,7 @@ watch(
       title: newProps.tempRecipe.title,
       coverImgUrl: newProps.tempRecipe.coverImgUrl,
       isPublic: newProps.tempRecipe.isPublic,
+      isRecommended: newProps.tempRecipe.isRecommended,
       category: newProps.tempRecipe.category,
       tags: newProps.tempRecipe.tags,
       cookingTime: newProps.tempRecipe.cookingTime,

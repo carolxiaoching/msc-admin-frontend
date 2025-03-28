@@ -456,8 +456,7 @@ $spacers: (
   //80
   22: $spacer * 5.5,
   //88
-  23: $spacer * 6,
-  //96
+  23: $spacer * 6, //96
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -531,6 +530,7 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1400px,
+  xxxl: 1800px,
 ) !default;
 // scss-docs-end grid-breakpoints
 
@@ -658,8 +658,8 @@ $font-family-sans-serif:
   'Segoe UI Emoji',
   'Segoe UI Symbol',
   'Noto Color Emoji' !default;
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
-  monospace !default;
+$font-family-monospace:
+  SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base: var(--#{$prefix}font-sans-serif) !default;
 $font-family-code: var(--#{$prefix}font-monospace) !default;
