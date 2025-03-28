@@ -1,6 +1,6 @@
 <template>
   <div aria-live="polite" aria-atomic="true" class="position-relative">
-    <div class="toastContainer mt-8 p-2">
+    <div class="toastContainer mt-8 p-2 z-999">
       <div
         class="toast show"
         role="alert"
